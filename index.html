@@ -7,8 +7,19 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="index.js" defer></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "zBtD0yASn6CV5-gFr",
+      });
+   })();
+</script>
 </head>
-                         <!--  TIME STAMP: SECCTION 1.10(10:01 Updated) -->
+                         <!--  TIME STAMP: SECCTION 1.11(6:37) -->
 <body>
     <section id="landing-page">
         <nav>
@@ -115,18 +126,18 @@
                 <h3 class="modal__sub-title modal__sub-title--contact">
                     I'm READY for my next career!
                 </h3>
-                <form id="contact__form" action="">
+                <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <label class="form__item--label" for="name">Name</label>
-                        <input class="input" name="user__name" type="text" required>
+                        <input class="input" name="user__name" type="text">
                     </div>
                     <div class="form__item">
                         <label class="form__item--label" for="email">Email</label>
-                        <input class="input" name="user__email" type="text" required>
+                        <input class="input" name="user__email" type="text">
                     </div>
                     <div class="form__item">
                         <label class="form__item--label" for="message">Message</label>
-                        <textarea class="input" name="user__message" type="text" required></textarea>
+                        <textarea class="input" name="user__message" type="text"></textarea>
                     </div>
                     <button id="contact__submit" class="form__submit">
                         Send it my way!
@@ -135,7 +146,7 @@
                 <div class="modal__overlay modal__overlay--loading">
                     <i class="fas fa-spinner"></i>
                 </div>
-                <div class="modal___overlay modal__overlay--success">
+                <div class="modal__overlay modal__overlay--success">
                     Thanks for the message! I'll be in touch.
                 </div>
             </div>
