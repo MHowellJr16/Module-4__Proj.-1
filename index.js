@@ -1,6 +1,15 @@
 // template_19t3sos
 // service_xtldnql
 // zBtD0yASn6CV5-gFr
+let  conntrastToggle = false
+function toggleContrast() {
+    conntrastToggle = !conntrastToggle
+    if (conntrastToggle) {
+        return document.body.classList += " dark-theme"
+    }
+    document.body.classList.remove("dark-theme")
+}
+
 function contact(event) {
 event.preventDefault()
 const loading = document.querySelector('.modal__overlay--loading')
