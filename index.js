@@ -1,6 +1,19 @@
 // template_19t3sos
 // service_xtldnql
 // zBtD0yASn6CV5-gFr
+
+function moveBackground(event) {
+    const shapes = document.querySelectorAll(".shape")
+    const x = event.clientX;
+    const y = event.clientY;
+    console.log(x, y)
+    for (let i = 0; i < shapes.length; i++) {
+        const isOdd = i % 2 !== 0
+        const boolInt = isOdd ? -1 : 1
+        shapes[i].style.transform = `translate(${x * 0.01 * boolInt}px, ${y * 0.01 * boolInt}px) rotate(${x * 0.05 * boolInt}deg)`
+    }
+}
+
 let  conntrastToggle = false
 function toggleContrast() {
     conntrastToggle = !conntrastToggle
