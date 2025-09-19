@@ -4,8 +4,9 @@
 
 function moveBackground(event) {
     const shapes = document.querySelectorAll(".shape")
-    const x = event.clientX;
-    const y = event.clientY;
+    const x = event.clientX * scaleFactor; 
+    const y = event.clientY * scaleFactor;
+    const scaleFactor = 1 / 20
     console.log(x, y)
     for (let i = 0; i < shapes.length; i++) {
         const isOdd = i % 2 !== 0
