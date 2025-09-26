@@ -13,6 +13,10 @@
     filter: invert(1);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 li {
     list-style-type: none;
 }
@@ -702,7 +706,7 @@ LARGE SMART PHONES,TABLETS, ETC.
     }
 
     .header__para {
-        font-size: 16px;
+        font-size: 20px;
         max-width: 100%;
     }
 
@@ -777,6 +781,21 @@ LARGE SMART PHONES,TABLETS, ETC.
         display: none;
     }
 
+    .project__description--para {
+        display: none;
+    }
+
+    .project__description {
+        left: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .project__description--sub-title {
+        margin-bottom: 8px;
+    }
+
     .mail__btn {
         width: 60px;
         height: 60px;
@@ -796,6 +815,10 @@ LARGE SMART PHONES,TABLETS, ETC.
 
     .modal__title {
         font-size: 22px;
+    }
+
+    .modal__half {
+        padding: 40px;
     }
 
     .modal__sub-title {
